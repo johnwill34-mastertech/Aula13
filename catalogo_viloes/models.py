@@ -30,3 +30,6 @@ class Vilao(models.Model):
     nivel_maldade = models.PositiveIntegerField(choices=nivel_valor)
     vivo = models.BooleanField(default=True)
     foto = models.ImageField(upload_to='')
+
+    def __str__(self):
+        return render(self.nome)
